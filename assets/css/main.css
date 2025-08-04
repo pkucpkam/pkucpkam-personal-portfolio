@@ -7,6 +7,25 @@
 */
 
 /*--------------------------------------------------------------
+# Hide Vertical Scrollbar
+--------------------------------------------------------------*/
+/* Hide scrollbar for webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+body {
+  -ms-overflow-style: none;
+  overflow-x: hidden; /* Also hide horizontal scrollbar if any */
+}
+
+/*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
@@ -497,6 +516,10 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
+.container {
+  padding: 0 36px;
+}
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
@@ -504,7 +527,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 40px 0;
   overflow: clip;
 }
 
